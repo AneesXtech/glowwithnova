@@ -222,10 +222,70 @@ h1 em, h2 em { font-weight: 400; color: var(--rose); }
 .newsletter-inner { max-width: 720px; margin: auto; }
 .newsletter h2 { font-size: clamp(53px, 5vw, 75px); }
 .newsletter-inner > p:not(.eyebrow):not(.form-message) { max-width: 570px; margin: 25px auto 35px; color: var(--muted); }
-.newsletter-form { display: flex; max-width: 590px; margin: auto; border-bottom: 1px solid var(--charcoal); }
-.newsletter-form input { flex: 1; min-width: 0; padding: 16px 0; border: 0; outline: 0; background: transparent; }
-.newsletter-form button { display: flex; align-items: center; gap: 12px; border: 0; background: transparent; font-size: 10px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; cursor: pointer; }
-.newsletter-form button:hover .arrow-badge { background: var(--rose); border-color: var(--rose); color: var(--white); }
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  background: var(--ivory);
+  border: 1px solid rgba(41, 37, 33, 0.16);
+  border-radius: 999px;
+  padding: 6px 6px 6px 24px;
+  max-width: 520px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(41, 37, 33, 0.06);
+  transition: border-color .3s, box-shadow .3s;
+}
+.newsletter-form:focus-within {
+  border-color: var(--charcoal);
+  box-shadow: 0 6px 26px rgba(41, 37, 33, 0.12);
+}
+.newsletter-form input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 10px 12px 10px 0;
+  font-size: 14px;
+  color: var(--charcoal);
+  font-family: inherit;
+}
+.newsletter-form input::placeholder {
+  color: var(--muted);
+}
+.newsletter-form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  background: var(--charcoal);
+  color: var(--white);
+  padding: 0 22px;
+  min-height: 44px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .25s var(--ease);
+  flex-shrink: 0;
+}
+.newsletter-form button svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  transition: transform .25s var(--ease);
+}
+.newsletter-form button:hover {
+  background: var(--rose);
+  transform: translateY(-1px);
+}
+.newsletter-form button:hover svg {
+  transform: translateX(3px);
+}
 .form-message { min-height: 20px; margin: 12px 0 0; color: var(--rose); font-size: 11px; }
 
 .site-footer { padding: 90px 0 25px; background: var(--charcoal); color: #f5f0e9; }
@@ -237,6 +297,33 @@ h1 em, h2 em { font-weight: 400; color: var(--rose); }
 .socials a:hover { background: var(--rose); border-color: var(--rose); }
 .footer-column, .footer-signup { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
 .footer-column h3, .footer-signup h3 { margin: 0 0 13px; color: var(--white); font-size: 10px; letter-spacing: .17em; text-transform: uppercase; }
+.footer-accordion-header {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--white);
+  text-align: left;
+  cursor: default;
+}
+.footer-accordion-header h3 {
+  margin: 0 0 13px;
+  color: var(--white);
+  font-size: 10px;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+.footer-accordion-header .accordion-icon {
+  display: none;
+}
+.footer-accordion-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
 .footer-column a, .info-link { padding: 0; border: 0; background: none; color: #bcb4ad; font-size: 11px; cursor: pointer; text-align: left; transition: color .2s; }
 .footer-column a:hover, .info-link:hover { color: var(--white); }
 .footer-column p, .footer-signup p { margin: 6px 0 0; color: #8f8881; font-size: 11px; }
@@ -329,7 +416,6 @@ h1 em, h2 em { font-weight: 400; color: var(--rose); }
 .category-card, .editorial-image, .campaign-banner { background-color: var(--blush); }
 .campaign-banner::after { background: linear-gradient(90deg, rgba(27,22,18,.72), rgba(27,22,18,.28) 45%, rgba(27,22,18,0) 75%); }
 .editorial-signature { right: -10px; bottom: -40px; }
-.newsletter-form { border-bottom-color: rgba(41,37,33,.55); }
 
 /* ---- single hero banner ---- */
 .hero-banner {

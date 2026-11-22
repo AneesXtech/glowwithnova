@@ -347,6 +347,16 @@
     if (!event.target.closest(".hotspot")) $$(".hotspot").forEach((s) => { s.classList.remove("open"); $(".hotspot-dot", s).setAttribute("aria-expanded", "false"); });
   });
 
+  // footer accordion (mobile)
+  $$(".footer-accordion-header").forEach((header) => {
+    header.addEventListener("click", () => {
+      if (window.innerWidth > 900) return;
+      const accordion = header.closest(".footer-accordion");
+      const isOpen = accordion.classList.toggle("is-open");
+      header.setAttribute("aria-expanded", String(isOpen));
+    });
+  });
+
   $("#year").textContent = new Date().getFullYear();
   renderProducts();
   renderCart();

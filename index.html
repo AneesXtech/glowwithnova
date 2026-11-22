@@ -223,7 +223,7 @@
         <form class="newsletter-form" id="newsletter-form">
           <label class="sr-only" for="newsletter-email">Email address</label>
           <input id="newsletter-email" type="email" name="email" placeholder="Your email address" required autocomplete="email">
-          <button type="submit">Subscribe<b class="arrow-badge"><svg aria-hidden="true"><use href="#icon-arrow"></use></svg></b></button>
+          <button type="submit"><span>Subscribe</span><svg aria-hidden="true"><use href="#icon-arrow"></use></svg></button>
         </form>
         <p class="form-message" id="newsletter-message" role="status"></p>
       </div>
@@ -242,10 +242,55 @@
           <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#icon-facebook"></use></svg></a>
         </div>
       </div>
-      <div class="footer-column"><h3>Shop</h3><a href="#new-arrivals">Shop all</a><a href="#new-arrivals" data-filter="Necklaces">Necklaces</a><a href="#new-arrivals" data-filter="Earrings">Earrings</a><a href="#new-arrivals" data-filter="Bracelets">Bracelets</a></div>
-      <div class="footer-column"><h3>Information</h3><a href="#about">About us</a><a href="mailto:glowwithnova11@gmail.com">Contact</a><button class="info-link" data-message="FAQ details are coming soon. Please contact us in the meantime.">FAQ</button><button class="info-link" data-message="Shipping information is being finalised. Please contact us for help.">Shipping</button><button class="info-link" data-message="Returns information is being finalised. Please contact us for help.">Returns</button></div>
-      <div class="footer-column"><h3>Customer care</h3><a href="mailto:glowwithnova11@gmail.com">glowwithnova11@gmail.com</a><a href="tel:+61468412638">0468 412 638</a><p>Questions? We would love to help.</p></div>
-      <div class="footer-signup"><h3>Join the glow list</h3><p>New pieces, styling notes and little surprises.</p><form class="footer-form"><label class="sr-only" for="footer-email">Email address</label><input id="footer-email" type="email" placeholder="Email address" required><button aria-label="Subscribe"><b class="arrow-badge"><svg aria-hidden="true"><use href="#icon-arrow"></use></svg></b></button></form></div>
+
+      <div class="footer-column footer-accordion">
+        <button class="footer-accordion-header" type="button" aria-expanded="false">
+          <h3>Shop</h3>
+          <svg class="accordion-icon"><use href="#icon-chevron"></use></svg>
+        </button>
+        <div class="footer-accordion-content">
+          <a href="#new-arrivals">Shop all</a>
+          <a href="#new-arrivals" data-filter="Necklaces">Necklaces</a>
+          <a href="#new-arrivals" data-filter="Earrings">Earrings</a>
+          <a href="#new-arrivals" data-filter="Bracelets">Bracelets</a>
+        </div>
+      </div>
+
+      <div class="footer-column footer-accordion">
+        <button class="footer-accordion-header" type="button" aria-expanded="false">
+          <h3>Information</h3>
+          <svg class="accordion-icon"><use href="#icon-chevron"></use></svg>
+        </button>
+        <div class="footer-accordion-content">
+          <a href="#about">About us</a>
+          <a href="mailto:glowwithnova11@gmail.com">Contact</a>
+          <button class="info-link" data-message="FAQ details are coming soon. Please contact us in the meantime.">FAQ</button>
+          <button class="info-link" data-message="Shipping information is being finalised. Please contact us for help.">Shipping</button>
+          <button class="info-link" data-message="Returns information is being finalised. Please contact us for help.">Returns</button>
+        </div>
+      </div>
+
+      <div class="footer-column footer-accordion">
+        <button class="footer-accordion-header" type="button" aria-expanded="false">
+          <h3>Customer care</h3>
+          <svg class="accordion-icon"><use href="#icon-chevron"></use></svg>
+        </button>
+        <div class="footer-accordion-content">
+          <a href="mailto:glowwithnova11@gmail.com">glowwithnova11@gmail.com</a>
+          <a href="tel:+61468412638">0468 412 638</a>
+          <p>Questions? We would love to help.</p>
+        </div>
+      </div>
+
+      <div class="footer-signup">
+        <h3>Join the glow list</h3>
+        <p>New pieces, styling notes and little surprises.</p>
+        <form class="footer-form">
+          <label class="sr-only" for="footer-email">Email address</label>
+          <input id="footer-email" type="email" placeholder="Email address" required>
+          <button aria-label="Subscribe"><b class="arrow-badge"><svg aria-hidden="true"><use href="#icon-arrow"></use></svg></b></button>
+        </form>
+      </div>
     </div>
     <div class="shell footer-bottom">
       <p>© <span id="year"></span> Glow With Nova. All rights reserved.</p>
